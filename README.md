@@ -12,7 +12,9 @@ npm install --save-dev ember-cli-zopim-live-chat
 
 ## Configuration
 
-This plugin uses the Ember CLI project's configuration as defined in `config/environment.js`.
+Add `{{content-for 'zopim'}}` to your `index.html` file, just above the `</body>` tag (**Important**, this will be below where `vendor.js` is included).
+
+This remaining config uses the Ember CLI project's configuration as defined in `config/environment.js`.
 
 The code will be injected only if `ENV.zopim.id` is defined. For instance, to enable the code in only the production environment:
 

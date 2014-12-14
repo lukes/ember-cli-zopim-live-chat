@@ -49,10 +49,12 @@ module.exports = {
   name: 'ember-cli-zopim-live-chat',
 
   contentFor: function(type, config) {
-    if (type === 'head' && zopim.id !== null) {
+    var zopimConfig = config.zopim;
+
+    if (type === 'zopim' && zopimConfig) {
       var content = [];
-      content.push(zopimCore(config));
-      content.push(zopimWindow(config.window));
+      content = content.concat(zopimCore(zopimConfig));
+      content = content.concat(zopimWindow(zopimConfig.window));
       return content.join("\n");
     }
     return '';
