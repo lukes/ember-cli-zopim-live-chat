@@ -28,15 +28,15 @@ if (environment === 'production') {
 
 Zopim provides a Javascript snippet which contains your `id`.
 
-Everything after the `?` in the following portion of the snippet is your `id`:
+Everything after the `?` and before `;` in the following portion of the snippet is your `id`:
 
 ```javascript
 $.src='//v2.zopim.com/?[this-is-your-id]';z.t=+new Date;$.
 ```
 
-## Further configuration parameters
+## Config parameters
 
-### `window`
+### `ENV.zopim.window`
 
 * `offsetVertical`: Set the vertical offset of the chat window from the edge of the browser window in pixels
 * `offsetHorizontal`: Set the horizontal offset of the chat window from the edge of the browser window in pixels
