@@ -38,10 +38,14 @@ $.src='//v2.zopim.com/?[this-is-your-id]';z.t=+new Date;$.
 
 ### `ENV.zopim.window`
 
-* `offsetVertical`: Set the vertical offset of the chat window from the edge of the browser window in pixels
+* `offsetVertical`: Set the vertical offset of the chat window from the edge of the browser window
+  * **Allowed value** Integer pixel value
 * `offsetHorizontal`: Set the horizontal offset of the chat window from the edge of the browser window in pixels
-* `position`: Set position of the chat window. Allowed values: `br` (Bottom right), `bl` (Bottom left), `tr` (Top right), `tl` (Top left)
-* `size`: Set the size of the chat window.  Allowed values: `small`, `medium`, `large`.
+  * **Allowed value** Integer pixel value
+* `position`: Set position of the chat window.
+  * **Allowed values:** `br` (Bottom right), `bl` (Bottom left), `tr` (Top right), `tl` (Top left)
+* `size`: Set the size of the chat window.
+  * **Allowed values:** `small`, `medium`, `large`.
 
 **Example:**
 
