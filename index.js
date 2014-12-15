@@ -28,13 +28,13 @@ function zopimWindow(config) {
     settings.push(prefix+'setOffsetHorizontal('+config.offsetHorizontal+');')
   }
   if (config.position) {
-    settings.push(prefix+'setPosition('+config.position+');')
+    settings.push(prefix+'setPosition(\''+config.position+'\');')
   }
   if (config.size) {
-    settings.push(prefix+'setSize('+config.size+');')
+    settings.push(prefix+'setSize(\''+config.size+'\');')
   }
   if (config.title) {
-    settings.push(prefix+'setTitle('+config.title+');')
+    settings.push(prefix+'setTitle(\''+config.title+'\');')
   }
 
   return settings;
@@ -49,7 +49,7 @@ function zopimBubble(config) {
   var settings = [];
 
   if (config.color) {
-    settings.push(prefix+'setColor('+config.color+');')
+    settings.push(prefix+'setColor(\''+config.color+'\');')
   }
 
   return settings;
