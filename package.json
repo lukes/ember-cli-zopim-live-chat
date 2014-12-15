@@ -10,6 +10,7 @@
   "license": "MIT",
   "devDependencies": {},
   "keywords": [
+    "ember",
     "ember-addon",
     "ember-cli",
     "zopim",

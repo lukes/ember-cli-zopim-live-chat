@@ -12,11 +12,15 @@ npm install --save-dev ember-cli-zopim-live-chat
 
 ## Configuration
 
-Add `{{content-for 'zopim'}}` to your `index.html` file, just above the `</body>` tag (**Important**, this will be below where `vendor.js` is included).
+### index.html
 
-This remaining config uses the Ember CLI project's configuration as defined in `config/environment.js`.
+Add `{{content-for 'zopim'}}` to your `index.html` file, just above the `</body>` tag.
 
-The code will be injected only if `ENV.zopim.id` is defined. For instance, to enable the code in only the production environment:
+**Important**, this will be below where `vendor.js` is included.
+
+### config/environment.js
+
+The zopim code will be injected only if `ENV.zopim.id` is defined. For instance, to enable the code in only the production environment:
 
 ```javascript
 if (environment === 'production') {
@@ -48,6 +52,8 @@ $.src='//v2.zopim.com/?[this-is-your-id]';z.t=+new Date;$.
   * **Allowed values:** `br` (Bottom right), `bl` (Bottom left), `tr` (Top right), `tl` (Top left)
 * `size`: Set the size of the chat window.
   * **Allowed values:** `small`, `medium`, `large`.
+* `title`: Set the title of the chat window.
+  * **Allowed value:** String title.
 
 **Example:**
 
@@ -59,7 +65,26 @@ if (environment === 'production') {
       offsetVertical: 100,
       offsetHorizontal: 120,
       position: 'br',
-      size: 'small'
+      size: 'small',
+      title: 'Chat Support'
+    }
+  };
+}
+```
+
+### `ENV.zopim.bubble`
+
+* `color`: Set the color of the chat bubble.
+  * **Allowed value** hexadecimal color (‘#3300cc’)
+
+**Example:**
+
+```javascript
+if (environment === 'production') {
+  ENV.zopim = {
+    id: 'xxx',
+    bubble: {
+      color: '#3300cc'
     }
   };
 }

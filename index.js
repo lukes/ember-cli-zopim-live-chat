@@ -33,6 +33,33 @@ function zopimWindow(config) {
   if (config.size) {
     settings.push(prefix+'setSize('+config.size+');')
   }
+  if (config.title) {
+    settings.push(prefix+'setTitle('+config.title+');')
+  }
+
+  return settings;
+}
+
+function zopimBubble(config) {
+  if (!config) {
+    return [];
+  }
+
+  var prefix = '$zopim.livechat.bubble.';
+  var settings = [];
+
+  if (config.color) {
+    settings.push(prefix+'setColor('+config.color+');')
+  }
+
+  return settings;
+}
+
+function zopimSettings(config) {
+  var settings = [];
+
+  settings = settings.concat(zopimWindow(config.window));
+  settings = settings.concat(zopimBubble(config.bubble));
 
   return [
     "<script type='text/javascript'>",
@@ -54,7 +81,7 @@ module.exports = {
     if (type === 'zopim' && zopimConfig) {
       var content = [];
       content = content.concat(zopimCore(zopimConfig));
-      content = content.concat(zopimWindow(zopimConfig.window));
+      content = content.concat(zopimSettings(zopimConfig));
       return content.join("\n");
     }
     return '';
