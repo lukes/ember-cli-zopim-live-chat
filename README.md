@@ -1,10 +1,10 @@
 # ember-cli-zopim-live-chat
 
-Plugin for ember-cli that injects Zopim Live chat code into HTML content.
+Plugin for ember-cli to integrate with Zopim Live chat.
 
 ## Installation
 
-To install simply run:
+To install, run:
 
 ```
 npm install --save-dev ember-cli-zopim-live-chat
@@ -16,7 +16,7 @@ npm install --save-dev ember-cli-zopim-live-chat
 
 Add `{{content-for 'zopim'}}` to your `index.html` file, just above the `</body>` tag.
 
-**Important**, this will be below where `vendor.js` is included.
+**Important**, this must be below where `vendor.js` is included.
 
 ### config/environment.js
 
