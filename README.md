@@ -30,6 +30,14 @@ if (environment === 'production') {
 }
 ```
 
+If you have `ember-cli-content-security-policy` enabled, you will get Content Security Policy warnings in your console. Add the following policy for `script-src`:
+
+```javascript
+ENV.contentSecurityPolicy = {
+  'script-src': "'self' 'unsafe-inline' 'unsafe-eval' *.zopim.com"
+}
+```
+
 ## Where do I find the value for `id`?
 
 Zopim provides a Javascript snippet which contains your `id`.
