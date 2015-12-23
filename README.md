@@ -7,6 +7,12 @@ Plugin for ember-cli to integrate with Zopim Live chat.
 To install, run:
 
 ```
+ember install ember-cli-zopim-live-chat
+```
+
+Or, for older versions of Ember CLI, run:
+
+```
 npm install --save-dev ember-cli-zopim-live-chat
 ```
 
